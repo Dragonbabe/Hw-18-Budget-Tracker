@@ -1,0 +1,28 @@
+{
+  "name": "budget-app",
+  "version": "1.0.0",
+  "description": "Use this handy app to track your budget while traveling. You don't even need internet for it to work.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dragonbabe/Hw-18-Budget-Tracker.git"
+  },
+  "keywords": [
+    "budget-app"
+  ],
+  "author": "Esther Walker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dragonbabe/Hw-18-Budget-Tracker/issues"
+  },
+  "homepage": "https://github.com/Dragonbabe/Hw-18-Budget-Tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7"
+  }
+}
