@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Dragonbabe/Hw-18-Budget-Tracker#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.9.7"
+    "mongoose": "^5.9.7",
+    "path": "^0.12.7"
   }
 }
