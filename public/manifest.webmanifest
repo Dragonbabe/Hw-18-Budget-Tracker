@@ -1,14 +1,16 @@
 {
     "name": "Hw-18-Budget-Tracker",
-    "short-name": "budget-app",
+    "short_name": "budget-app",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f7fafc",
+    "theme_color": "#ffffff",
+    "description": "A delightful and handy budget tracker app you can still use off-line",
     "icons": [
         {
-            "src": "public/icon-32x32.png",
-            "sizes": "32x32",
+            "src": "public/icon.192x192.png",
+            "sizes": "192x192",
             "type": "image/png"
         }
-    ],
-    "start_url": "/",
-    "display": "standalone"
-
+    ]
 }

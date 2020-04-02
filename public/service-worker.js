@@ -1,7 +1,12 @@
 const FILES_TO_CACHE =[
     `/`,
     `/index.html`,
-    `db.js`,
+    `/db.js`,
+    `/manifest.webmanifest`,
+    `/style.css`,
+    `/index.js`,
+    `/public/favicon.ico`,
+    `/public/icon-192x192.png`
 ];
 
 const CACHE_NAME = `static-cache-v2`;
@@ -48,18 +53,14 @@ self.addEventListener(`fetch`, event => {
                     cache.put(event.request.url, response.clone());
                 }
                 return response;
-            })
-            .catch(err => {
-                //If network request failed, get it from the cache
-                cache.match(event.request);
-                console.error(err);
-            }))
+            }) //If network request failed, get it from the cache
+            .catch(() => cache.match(event.request)))
             .catch(err => console.error(err))
         );
     } else {
         //If the request is not for an API, serve static assets using "off-line first" approach.
         event.respondWith(
-            caches.match(event.request).then(response => response || fetch(event.request))
+            caches.open(CACHE_NAME).then(cache => cache.match(event.request).then(response => response || fetch(event.request)))
             .catch(err => console.error(err))
         );
     }
