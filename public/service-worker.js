@@ -5,8 +5,8 @@ const FILES_TO_CACHE =[
     `/manifest.webmanifest`,
     `/style.css`,
     `/index.js`,
-    `/public/favicon.ico`,
-    `/public/icon-192x192.png`
+    `./favicon.ico`,
+    `./icon-192x192.png`
 ];
 
 const CACHE_NAME = `static-cache-v2`;
